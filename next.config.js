@@ -1,8 +1,16 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withPWA = require('next-pwa')
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = withPWA({
+const runtimeCaching = require("next-pwa/cache");
+const withPWA = require("next-pwa")({
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    runtimeCaching,
+    buildExcludes: [/middleware-manifest.json$/],
+});
+
+const nextConfig = withPWA({
   pwa: {
     dest: 'public',
     disable: !isProd
@@ -17,11 +25,12 @@ module.exports = withPWA({
       'ondigitalocean.app'
     ]
   },
-  webpack5: true,
+  webpack5: false,
   webpack: function (config, options) {
     return config
   },
   typescript: {
     ignoreBuildErrors: true
   }
-})
+});
+module.exports = nextConfig;
