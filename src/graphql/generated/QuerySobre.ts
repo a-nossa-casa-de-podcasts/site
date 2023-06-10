@@ -32,7 +32,7 @@ export interface QuerySobre_sobre_Members {
 export interface QuerySobre_sobre {
   __typename: "Sobre";
   Title: string;
-  Embed: string | null;
+  Embed: string;
   Summary: string;
   Members: (QuerySobre_sobre_Members | null)[] | null;
 }
