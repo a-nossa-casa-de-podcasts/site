@@ -1,4 +1,4 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import Logo from 'components/Logo'
 import Heading from 'components/Heading'
 import { Instagram as InstagramIcon } from '@styled-icons/boxicons-logos/Instagram'
@@ -22,9 +22,9 @@ export type FooterProps = {
 
 const Footer = ({
   outerBarsColor = '29292B',
-  innerBarsColor = 'ffffff',
-  listLinks
-}: FooterProps) => (
+  innerBarsColor = 'ffffff'
+}: // listLinks
+FooterProps) => (
   <S.Wrapper outerBarsColor={outerBarsColor} innerBarsColor={innerBarsColor}>
     <S.Content>
       <S.Column aria-labelledby="logo">
@@ -34,7 +34,7 @@ const Footer = ({
       </S.Column>
       <S.Column aria-labelledby="list-links">
         <Heading size="small">Links</Heading>
-        <nav aria-labelledby="Lista de links">
+        {/* <nav aria-labelledby="Lista de links">
           {listLinks.map((link, index) => (
             <Link
               key={index}
@@ -45,7 +45,7 @@ const Footer = ({
               {link.label}
             </Link>
           ))}
-        </nav>
+        </nav> */}
       </S.Column>
       <S.Column aria-labelledby="social-media-and-contacts">
         <Heading size="small">Redes Sociais</Heading>

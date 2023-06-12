@@ -16,6 +16,7 @@ export type EpisodeHeaderProps = {
   from: string
   embedUrl: string
   categories: CategoryProps[]
+  episodeNumber: number
 }
 
 const EpisodeHeader = ({
