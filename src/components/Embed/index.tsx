@@ -13,6 +13,8 @@ const Embed = ({ embedUrl }: EmbedProps) => {
         frameBorder="0"
         allow="encrypted-media"
         scrolling="no"
+        width="100%"
+        height="152"
       ></S.Iframe>
     </S.Wrapper>
   )
