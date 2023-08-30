@@ -3,11 +3,18 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    background: ${theme.colors.gray};
+    min-height: 100vh;
+    background: ${theme.colors.darkGray};
+    background-image: url('/img/bgHero.svg');
+    background-size: 30vh;
+    background-repeat: repeat-x;
+    background-position: center;
+    color: ${theme.colors.white};
     span {
       font-size: ${theme.font.sizes.xxsmall};
     }
     h2 {
+      padding-top: 170px;
       font-size: ${theme.font.sizes.large};
       line-height: ${theme.font.sizes.large};
       margin-bottom: ${theme.spacings.xxsmall};
@@ -19,29 +26,43 @@ export const Wrapper = styled.div`
     }
     p {
       font-size: ${theme.font.sizes.xsmall};
+      width: 40%;
+      margin: 0 auto;
+      position: relative;
+      top: 5vh;
     }
-    &::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 18vh;
-      background: ${theme.colors.lightGray};
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: ${theme.layers.zero};
+    div > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      iframe{
+        margin: 15vh 0;
+        width: 42%;
+      }
     }
-    &::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 25vh;
-      background-image: url('/img/sound-wave-medium.svg');
-      background-size: contain;
-      position: absolute;
-      top: 6rem;
-      left: 0;
-    }
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   height: 18vh;
+    //   background: ${theme.colors.darkGray};
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: ${theme.layers.zero};
+    // }
+    // &::after {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   height: 25vh;
+    //   background: ${theme.colors.darkGray};
+    //   background-image: url('/img/sound-wave-medium.svg');
+    //   background-size: contain;
+    //   position: absolute;
+    //   top: 6rem;
+    //   left: 0;
+    // }
 
     > div {
       position: relative;

@@ -25,11 +25,6 @@ export interface QueryPostBySlug_posts_categorias {
   name: string;
 }
 
-export interface QueryPostBySlug_posts_tags {
-  __typename: "ComponentFragmentTags";
-  name: string;
-}
-
 export interface QueryPostBySlug_posts {
   __typename: "Posts";
   cover: QueryPostBySlug_posts_cover | null;
@@ -39,7 +34,6 @@ export interface QueryPostBySlug_posts {
   published_at: any | null;
   author: QueryPostBySlug_posts_author | null;
   categorias: QueryPostBySlug_posts_categorias[];
-  tags: (QueryPostBySlug_posts_tags | null)[] | null;
 }
 
 export interface QueryPostBySlug_menuFragment_menu_pagina_generica {

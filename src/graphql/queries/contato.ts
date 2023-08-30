@@ -2,24 +2,11 @@ import { gql } from '@apollo/client'
 import { MenuFragment } from 'graphql/fragments/menu'
 import { RodapeFragment } from 'graphql/fragments/rodape'
 
-export const QUERY_SOBRE = gql`
-  query QuerySobre {
-    sobre {
+export const QUERY_CONTATO = gql`
+  query QueryContato {
+    contato {
       Title
-      embed
-      Summary
-      Members {
-        id
-        name
-        avatar {
-          url
-        }
-        bio
-        links {
-          network
-          url
-        }
-      }
+      Description
     }
     menuFragment: barraLateral {
       ...MenuFragment

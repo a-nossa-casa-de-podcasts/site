@@ -19,8 +19,8 @@ export const List = styled.div`
       width: 215px;
       height: 215px;
       margin-right: ${theme.spacings.medium};
-      div:last-child {
-        opacity: 0;
+      a{
+        padding: ${theme.spacings.small};
       }
     }
     span {
@@ -48,6 +48,6 @@ export const List = styled.div`
       article {
         display: none;
       }
-    `}
+    `}
   `}
 `

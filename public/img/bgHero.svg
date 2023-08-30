@@ -14,7 +14,6 @@
   <path  class="Line_13" d="M250 170H240V370H250V170Z"/>
   <path  class="Line_14" d="M270 50H260V340H270V50Z"/>
   <path  class="Line_15" d="M290 180H280V390H290V180Z"/>
-  <path  class="Line_16" d="M310 110H300V410H310V110Z"/>
   <path  class="Line_17" d="M30 410H20V420H30V410Z"/>
   <path  class="Line_18" d="M50 360H40V370H50V360Z"/>
   <path  class="Line_19" d="M110 400H100V420H110V400Z"/>
@@ -49,5 +48,4 @@
   <path  class="Line_48" d="M250 460H240V470H250V460Z"/>
   <path  class="Line_49" d="M210 450H200V470H210V450Z"/>
   <path  class="Line_50" d="M10 460H0V470H10V460Z"/>
-  <path  class="Line_51" d="M10 380H0V400H10V380Z"/>
 </svg>

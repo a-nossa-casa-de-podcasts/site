@@ -18,6 +18,7 @@ import {
 } from 'graphql/generated/QueryPodCastBySlug'
 import { QueryPostBySlug_posts } from 'graphql/generated/QueryPostBySlug'
 import { QuerySobre_sobre } from 'graphql/generated/QuerySobre'
+import { title } from 'process'
 import { getPublicUrl, exibirNovoEpisodio } from 'utils/getPublicUrl'
 
 export const featuredPodcastMapper = (
@@ -314,7 +315,7 @@ export const sobreMapper = (sobre: (QuerySobre_sobre | null) | undefined) => {
     ? {
         header: {
           img: '',
-          embedUrl: regex.exec(sobre?.Embed),
+          embedUrl: regex.exec(sobre?.embed),
           title: sobre?.Title,
           summary: sobre?.Summary
         },
@@ -328,6 +329,16 @@ export const sobreMapper = (sobre: (QuerySobre_sobre | null) | undefined) => {
             url: link?.url
           }))
         }))
+      }
+    : null
+}
+
+
+export const contatoMapper = (contato: (QueryContato_contato | null) | undefined) => {
+  return contato
+    ? {
+        title: contato?.Title,
+        description: contato?.Description
       }
     : null
 }

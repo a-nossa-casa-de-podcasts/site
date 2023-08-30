@@ -55,7 +55,7 @@ export const Banner = styled.div`
     height: 18vh;
     left: calc(-${theme.grid.collumn}*2);
     img {
-      object-fit: cover;
+      object-fit: contain;
     }
     ${media.lessThan('medium')`
       left: -${theme.grid.gutter};
@@ -66,6 +66,10 @@ export const Banner = styled.div`
     `}
     ${media.greaterThan('medium')`
       height: 35vh;
+      left: -15rem;
+      img {
+        object-fit: 100%;
+      }
     `}
   `}
 `

@@ -1,34 +1,26 @@
 import Base from 'components/templates/Base'
 import { FullContainer } from 'components/atoms/Container'
-import InternalHeader, {
-  InternalHeaderProps
-} from 'components/Headers/InternalHeader'
-import MemberList from 'components/MemberList'
-
-import membersMock from 'components/MemberList/mock'
-
 import * as S from './styles'
 import { MenuLinksProps } from 'components/Menu'
 import { FooterLinksProps } from 'components/Footer'
-import { MemberProps } from 'components/Member'
 
-export type AboutPageTemplateProps = {
+export type ContactPageTemplateProps = {
+  Title: string
+  Description: string
   outerBarsColor: string
   innerBarsColor: string
-  header: InternalHeaderProps
-  members: MemberProps[]
   menuListLinks: MenuLinksProps[]
   footerListLinks: FooterLinksProps[]
 }
 
-const AboutPage = ({
-  header,
-  members = membersMock,
+const ContactPage = ({
+  Title,
+  Description,
   outerBarsColor = '29292B',
   innerBarsColor = '0E3C63',
   menuListLinks,
   footerListLinks
-}: AboutPageTemplateProps) => (
+}: ContactPageTemplateProps) => (
   <Base
     outerBarsColor={outerBarsColor}
     innerBarsColor={innerBarsColor}
@@ -37,13 +29,14 @@ const AboutPage = ({
   >
     <FullContainer>
       <S.Section>
-        <InternalHeader {...header} />
+        <h3>{Title}</h3>
+        <p>{Description}</p>
       </S.Section>
       <S.Section>
-        <MemberList members={members} />
+
       </S.Section>
     </FullContainer>
   </Base>
 )
 
-export default AboutPage
+export default ContactPage

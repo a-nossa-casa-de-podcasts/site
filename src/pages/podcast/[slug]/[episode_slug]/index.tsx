@@ -40,7 +40,6 @@ export async function getStaticPaths() {
     query: QUERY_EPISODE,
     variables: { limit: 7 }
   })
-console.log("data==>", data);
   const paths = data.episodes
                     .map((episode) => (
                         { params: { slug: episode.podcast?.slug, episode_slug: episode.slug } }
@@ -48,8 +47,6 @@ console.log("data==>", data);
                     .filter( (path) => 
                         path.params.slug != undefined
                     );
-
-  console.log("paths==>", paths);
 
   return { paths, fallback: true }
 }

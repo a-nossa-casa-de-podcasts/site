@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
     `}
 
     div {
+      text-align: left;
       &:first-child {
         height: auto;
         max-width: 27rem;

@@ -30,6 +30,7 @@ export default function Index(props: GenericPageTemplateProps) {
 }
 
 export async function getStaticPaths() {
+  console.log("teste...");
   const { data } = await apolloClient.query<QueryPosts, QueryPostsVariables>({
     query: QUERY_POSTS,
     variables: { limit: 7 }
@@ -55,7 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!data.posts.length) {
     return { notFound: true }
   }
-
+  
   return {
     props: {
       headerInfo: headerPostMapper(data.posts),

@@ -1,3 +1,4 @@
+import * as S from './styles'
 import React, { useRef, useState } from 'react'
 
 function Subscribe() {
@@ -80,70 +81,72 @@ function Subscribe() {
   }
 
   return (
-    <form onSubmit={subscribe}>
-      <label htmlFor="nome-input">{'Nome'}</label>
-      <input
-        id="nome-input"
-        name="nome"
-        placeholder="voce@maravilhoso.com"
-        ref={inputNome}
-        required
-        type="text"
-      />
-      <br />
-      <label htmlFor="email-input">{'Endereço de email'}</label>
-      <input
-        id="email-input"
-        name="email"
-        placeholder="voce@maravilhoso.com"
-        ref={inputEl}
-        required
-        type="email"
-      />
-      <br />
-      <label htmlFor="telefone-input">{'Telefone'}</label>
-      <input
-        id="telefone-input"
-        name="telefone"
-        placeholder="33882096"
-        ref={inputTelefone}
-        type="text"
-      />
-      <br />
-      <label htmlFor="cidade-input">{'Cidade'}</label>
-      <input id="cidade-input" name="cidade" ref={inputCidade} type="text" />
-      <br />
-      <label htmlFor="uf-input">{'UF'}</label>
-      <input
-        id="uf-input"
-        name="uf"
-        placeholder="DF"
-        ref={inputUF}
-        type="text"
-      />
-      <br />
-      <label htmlFor="assunto-input">{'Assunto'}</label>
-      <input
-        id="assunto-input"
-        name="assunto"
-        placeholder="Assunto maneiro"
-        ref={inputAssunto}
-        required
-        type="text"
-      />
-      <br />
-      <label htmlFor="ideia-input">{'Ideia'}</label>
-      <input
-        id="ideia-input"
-        name="ideia"
-        placeholder="minha ideia muito boa"
-        ref={inputIdeia}
-        required
-        type="text"
-      />
-      <div>{message ? message : `Prometemos que não enviaremos spam.`}</div>
-      <button type="submit">{'✨ Inscreva-se 💌'}</button>
-    </form>
+    <S.Wrapper>
+      <form onSubmit={subscribe}>
+        <label htmlFor="nome-input">{'Nome'}</label>
+        <input
+          id="nome-input"
+          name="nome"
+          placeholder="voce@maravilhoso.com"
+          ref={inputNome}
+          required
+          type="text"
+        />
+        <br />
+        <label htmlFor="email-input">{'Endereço de email'}</label>
+        <input
+          id="email-input"
+          name="email"
+          placeholder="voce@maravilhoso.com"
+          ref={inputEl}
+          required
+          type="email"
+        />
+        <br />
+        <label htmlFor="telefone-input">{'Telefone'}</label>
+        <input
+          id="telefone-input"
+          name="telefone"
+          placeholder="33882096"
+          ref={inputTelefone}
+          type="text"
+        />
+        <br />
+        <label htmlFor="cidade-input">{'Cidade'}</label>
+        <input id="cidade-input" name="cidade" ref={inputCidade} type="text" />
+        <br />
+        <label htmlFor="uf-input">{'UF'}</label>
+        <input
+          id="uf-input"
+          name="uf"
+          placeholder="DF"
+          ref={inputUF}
+          type="text"
+        />
+        <br />
+        <label htmlFor="assunto-input">{'Assunto'}</label>
+        <input
+          id="assunto-input"
+          name="assunto"
+          placeholder="Assunto maneiro"
+          ref={inputAssunto}
+          required
+          type="text"
+        />
+        <br />
+        <label htmlFor="ideia-input">{'Ideia'}</label>
+        <input
+          id="ideia-input"
+          name="ideia"
+          placeholder="minha ideia muito boa"
+          ref={inputIdeia}
+          required
+          type="textarea"
+        />
+        <div>{message ? message : `Prometemos que não enviaremos spam.`}</div>
+        <button type="submit">{'✨ Inscreva-se 💌'}</button>
+      </form>
+    </S.Wrapper>
   )
 }
 

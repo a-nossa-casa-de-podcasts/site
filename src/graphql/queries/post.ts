@@ -31,9 +31,6 @@ export const QUERY_POST_BY_SLUG = gql`
         slug
         name
       }
-      tags {
-        name
-      }
     }
     menuFragment: barraLateral {
       ...MenuFragment

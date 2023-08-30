@@ -32,6 +32,7 @@ const EpisodeList = ({ items }: EpisodeListProps) => {
           <div>
             <span>{item.releaseDate}</span>
             <h3>
+
               <Link href={`../podcast/${item.slugPodcast}/${item.slug}`}>
                 <a>
                   {item.podcast} #{item.number} {item.title}
